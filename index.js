@@ -13,7 +13,7 @@ app.use(cors())
 app.use(express.json())
 
 const db = require('./db');
-const PORT = 4000;
+const PORT = process.env.PORT|| '4000';
 
 app.use(express.static(path.join(__dirname+'/public/build')));
 
